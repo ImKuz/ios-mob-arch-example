@@ -1,0 +1,20 @@
+{% set modules types.implementing.ModuleDescription %}
+public enum ModuleName: String {
+
+    // MARK: - Cases
+
+    {% for module in modules %}
+    case {{module.name}}
+    {% endfor %}
+
+    // MARK: - Path
+
+    var path: String {
+        switch self {
+        {% for module in modules %}
+        case .{{module.name}}:
+            return "{{module.annotations.path}}"
+        {% endfor %}
+        }    
+    }
+}

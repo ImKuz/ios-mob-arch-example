@@ -1,0 +1,11 @@
+import DI
+
+// sourcery:assembly={{name}}
+public struct {{name}}Assembly: Assembly {
+
+    public init() {}
+
+    public func assemble(container: Container) {
+
+    }
+}

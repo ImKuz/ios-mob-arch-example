@@ -1,0 +1,6 @@
+import FeatureSupport
+
+public protocol {{name}}ScreenFactory {
+
+    func make() -> LifecycleObservableController
+}

@@ -1,0 +1,30 @@
+import FeatureSupport
+import SwiftUI
+
+struct {{name}}View: View {
+
+    @ObservedObject
+    var viewStore: ViewStore<{{name}}State, {{name}}Action.ViewAction>
+
+    init(store: StoreOf<{{name}}Reducer>) {
+        viewStore = ViewStore(
+            store.scope(state: { $0 }, action: { .view($0) }),
+            observe: { $0 }
+        )
+    }
+
+    var body: some View {
+        EmptyView()
+    }
+}
+
+// MARK: - Previews
+
+struct {{name}}View_Previews: PreviewProvider {
+    static var previews: some View {
+        {{name}}View(store: .init(
+            initialState: .init(),
+            reducer: {{name}}ReducerMock()
+        ))
+    }
+}

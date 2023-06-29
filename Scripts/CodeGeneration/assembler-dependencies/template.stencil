@@ -1,0 +1,9 @@
+{% for type in types.implementing.AppAssemblerDependenciesGenerated %}
+    // sourcery:inline:auto:{{ type.name }}.DependencyList
+    static var list: [TargetDependency] = [
+        {% for assembly in types.all|annotated:"assembly" %}
+        .module(.{{ assembly.annotations.assembly }}),
+        {% endfor %} 
+    ]
+    // sourcery:end
+{% endfor %}

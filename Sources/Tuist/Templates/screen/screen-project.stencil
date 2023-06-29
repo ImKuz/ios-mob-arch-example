@@ -1,0 +1,23 @@
+import ProjectDescription
+import ProjectDescriptionHelpers
+
+// sourcery: path="/Screens{{mpath}}"
+enum {{name}}Screen: ModuleDescription {
+    static let name = "{{name}}Screen"
+
+    static let targets = [
+        Target.framework(
+            name: name,
+            dependencies: [
+                .module(.DI),
+                .module(.FeatureSupport),
+                .module(.{{name}}ScreenInterface),
+            ]
+        )
+    ]
+}
+
+let project = Project(
+    name: {{name}}Screen.name,
+    targets: {{name}}Screen.targets
+)

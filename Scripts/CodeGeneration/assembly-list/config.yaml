@@ -1,0 +1,9 @@
+sources: 
+  include:
+    - ../../../Sources/
+  exclude:
+    - ../../../Sources/Tuist/Dependencies/
+templates:
+  - ./template.stencil
+output: 
+  ../../../Sources/Projects/Applications/AppAssembler/Sources/AssemblyList.generated.swift

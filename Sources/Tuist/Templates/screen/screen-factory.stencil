@@ -1,0 +1,16 @@
+import {{name}}ScreenInterface
+import FeatureSupport
+
+// MARK: - Implementation
+
+final class {{name}}ScreenFactoryImpl: {{name}}ScreenFactory {
+
+    func make() -> LifecycleObservableController {
+        let store = StoreOf<{{name}}Reducer>(
+            initialState: .init(),
+            reducer: {{name}}Reducer()
+        )
+
+        return {{name}}View(store: store).embededInHost()
+    }
+}

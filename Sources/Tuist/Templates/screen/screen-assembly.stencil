@@ -1,0 +1,14 @@
+import DI
+import {{name}}ScreenInterface
+
+// sourcery:assembly={{name}}Screen
+public struct {{name}}ScreenAssembly: Assembly {
+
+    public init() {}
+
+    public func assemble(container: Container) {
+        container.register({{name}}ScreenFactory.self) { _ in
+            {{name}}ScreenFactoryImpl()
+        }
+    }
+}

@@ -1,0 +1,21 @@
+import ProjectDescription
+import ProjectDescriptionHelpers
+
+// sourcery: path="/Modules{{mpath}}"
+enum {{name}}: ModuleDescription {
+    static let name = "{{name}}"
+
+    static let targets = [
+        Target.module(
+            name: "{{name}}",
+            dependencies: [
+                .module(.DI),
+            ]
+        )
+    ]
+}
+
+let project = Project(
+    name: {{name}}.name,
+    targets: {{name}}.targets
+)

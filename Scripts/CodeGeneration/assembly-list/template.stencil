@@ -1,0 +1,13 @@
+import DI
+
+{% set assemblies types.all|annotated:"assembly" %}
+{% macro name assembly %}{% typed assembly as Variable %}{{assembly.annotations.assembly}}{% endmacro %}
+{% for item in assemblies %}
+import {% call name item %}
+{% endfor %}
+
+let assemblyList: [Assembly] = [
+    {% for item in assemblies %}
+    {% call name item %}Assembly(),
+    {% endfor %}
+]
