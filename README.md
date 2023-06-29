@@ -21,7 +21,7 @@ iOS multimodule architecture example using Tuist and Sourcery.
 
 3) Generate the project
 
-`acli generate -f`
+`arcli generate -f`
 
 ## HowTo
 
