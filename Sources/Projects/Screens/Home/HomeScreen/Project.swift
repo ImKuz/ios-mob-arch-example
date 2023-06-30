@@ -11,6 +11,7 @@ enum HomeScreen: ModuleDescription {
             dependencies: [
                 .module(.DI),
                 .module(.FeatureSupport),
+                .module(.Spec),
                 .module(.HomeScreenInterface),
             ]
         )

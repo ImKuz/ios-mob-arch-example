@@ -1,5 +1,6 @@
 import FeatureSupport
 import SwiftUI
+import Spec
 
 struct HomeView: View {
 
@@ -14,7 +15,9 @@ struct HomeView: View {
     }
 
     var body: some View {
-        EmptyView()
+        SpecAsset.autoAwesome.swiftUIImage
+            .resizable()
+            .scaledToFit()
     }
 }
 
