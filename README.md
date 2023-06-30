@@ -6,6 +6,12 @@ iOS multimodule architecture example using Tuist and Sourcery.
 - [ ] Add normal description
 - [ ] Add some placeholder code for applicaiton
 
+## Structure
+
+/CLI - Command line interface that works from any directory and simplifies project scripts execution
+/Sources - Sources of the app
+/Sources/Tuist - Project description and templates
+
 ## Building the project
 
 1) Install dependencies:
